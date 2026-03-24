@@ -318,33 +318,6 @@
     .opinion-card .author { font-size: 0.76rem; color: var(--muted); }
 
     /* ══════════════════════════════════════════
-       TICKER
-    ══════════════════════════════════════════ */
-    .ticker {
-      background: var(--red);
-      padding: 10px 0;
-      overflow: hidden;
-      white-space: nowrap;
-    }
-    .ticker-inner {
-      display: inline-flex;
-      animation: ticker 30s linear infinite;
-      gap: 60px;
-    }
-    .ticker-inner:hover { animation-play-state: paused; }
-    @keyframes ticker {
-      from { transform: translateX(0); }
-      to   { transform: translateX(-50%); }
-    }
-    .ticker-item {
-      font-family: var(--font-head);
-      font-size: 0.8rem;
-      letter-spacing: 0.15em;
-      color: #fff;
-    }
-    .ticker-sep { color: rgba(255,255,255,0.4); }
-
-    /* ══════════════════════════════════════════
        FOOTER
     ══════════════════════════════════════════ */
     footer {
@@ -709,13 +682,6 @@
     </nav>
   </header>
 
-  <!-- ══ TICKER ══════════════════════════════ -->
-  <div id="ticker" style="position:fixed;top:90px;left:0;right:0;z-index:99;">
-    <div class="ticker">
-      <div class="ticker-inner" id="ticker-content"></div>
-    </div>
-  </div>
-
   <!-- ══════════════════════════════════════════
        PAGE : HOME
   ══════════════════════════════════════════ -->
@@ -1051,6 +1017,11 @@ atteint un point de non-retour, laissant penser à un départ définitif de l’
 mythique. Mais l’élection d’Emmanuel Grégoire dimanche dernier pourrait rouvrir
 le débat, alors quelles seraient les conséquences pour la ville de Paris si le Parc
 des Princes était laissé vacant par le PSG ?</p>
+
+<div class="article-img-placeholder">
+          <img src="https://media.lesechos.com/api/v1/images/view/638875150c9b8e002d57dcb8/1280x720/0702915541298-web-tete.jpg" alt="Le Parc des Princes, stade historique du PSG — illustration" />
+          <span> Photo — Le Parc des Princes, stade historique du PSG — illustration</span>
+        </div>
 
         <p>Le ton est donné depuis longtemps du côté du club. Nasser Al-Khelaïfi a tranché
 publiquement : "C'est fini, on veut bouger du Parc des Princes." En cause : une enceinte
@@ -1479,22 +1450,6 @@ Jeux n'attend pas.
       author: "Tribune libre — Corentin Martin"
     }
   ];
-
-
-
-  /* ════════════════════════════════════════════
-     TICKER
-  ════════════════════════════════════════════ */
-  const tickerItems = [
-    "MUNICIPALES 2026 — Emmanuel Grégoire élu maire de Paris le 22 mars avec 51 %",
-    "PSG — L'avenir du Parc des Princes au cœur des débats après l'élection",
-    "SPORT AMATEUR — Paris : 1 700 associations en manque de créneaux",
-    "JO 2024 — Deux ans après, l'héritage pour le sport de proximité reste à construire",
-    "BASKET — 140 000 licenciés refusés à la rentrée 2024-2025 faute d'équipements",
-  ];
-  const doubled = [...tickerItems, ...tickerItems];
-  document.getElementById('ticker-content').innerHTML =
-    doubled.map(t => `<span class="ticker-item">${t}</span><span class="ticker-sep">◆</span>`).join('');
 
   /* ════════════════════════════════════════════
      LATEST LIST
