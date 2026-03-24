@@ -107,7 +107,7 @@
       background:
         linear-gradient(160deg, rgba(201,41,42,0.15) 0%, transparent 50%),
         linear-gradient(to top, rgba(26,23,20,0.95) 0%, rgba(26,23,20,0.5) 60%, transparent 100%),
-        url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=1600&q=85') center/cover no-repeat;
+        url('https://media.lesechos.com/api/v1/images/view/638875150c9b8e002d57dcb8/1280x720/0702915541298-web-tete.jpg') center/cover no-repeat;
       transform: scale(1.04);
       animation: heroZoom 12s ease-in-out infinite alternate;
     }
@@ -656,12 +656,36 @@
       border-bottom: 1px solid var(--border);
     }
     .article-img-placeholder {
-      background: var(--surface2);
-      border: 2px dashed var(--border);
       border-radius: 4px;
       padding: 40px 24px;
       margin: 28px 0;
       text-align: center;
+    }
+    .article-img-placeholder2 {
+      margin: 28px 0;
+    }
+    .article-img-placeholder2 .candidats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+    .article-img-placeholder2 .candidats-grid img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+      border-radius: 2px;
+    }
+    .article-img-placeholder2 span {
+      display: block;
+      text-align: center;
+      font-size: 0.75rem;
+      color: var(--muted);
+      font-style: italic;
+      padding-top: 6px;
+      border-top: 1px solid var(--border);
     }
     .article-img-placeholder span {
       font-size: 0.82rem;
@@ -702,7 +726,7 @@
       <div class="hero-bg"></div>
       <div class="hero-content">
         <span class="hero-tag">&#9679; PSG — Analyse</span>
-        <h1>Et si le PSG quittait <em>vraiment le Parc des Princes</em> ?</h1>
+        <h1>Municipales 2026 : quelles conséquences si le PSG venait réellement à <em>quitter le Parc des Princes</em> ?</h1>
         <div class="hero-meta">
           <span>Jonathan Jaar</span>
           <span class="dot"></span>
@@ -726,23 +750,23 @@
       <div class="featured-strip">
         <div class="card tall" onclick="showArticle(1)">
           <div class="card-img">
-            <img src="https://images.unsplash.com/photo-1529900748604-07564a03e7a6?w=800&q=75" alt="Terrain de foot amateur parisien"/>
+            <img src="https://mesinfos.fr/content/articles/246/A48246/initial-belleville-foot-montae-u15.jpg" alt="Terrain de foot amateur parisien"/>
           </div>
           <div class="card-body">
             <span class="card-tag">Infrastructures</span>
             <h2>Paris, ville olympique mais sportive à deux vitesses</h2>
-            <p>À Paris, deux millions de sportifs manquent de terrains. Le nouveau maire Grégoire hérite d'un déficit structurel que les municipales n'ont pas suffi à mettre au cœur du débat.</p>
+            <p>À Paris, deux millions de sportifs manquent de terrains. Le nouveau maire Emmanuel Grégoire hérite d'un déficit structurel que les municipales n'ont pas suffi à mettre au cœur du débat.</p>
             <div class="card-meta"><span>Louison Perard</span><span>·</span><span>Mars 2026</span></div>
           </div>
         </div>
         <div class="card tall" onclick="showArticle(2)">
           <div class="card-img">
-            <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=800&q=75" alt="Stade de football"/>
+            <img src="https://media.lesechos.com/api/v1/images/view/638875150c9b8e002d57dcb8/1280x720/0702915541298-web-tete.jpg" alt="Stade de football"/>
           </div>
           <div class="card-body">
             <span class="card-tag">PSG</span>
-            <h2>Municipales 2026 : et si le PSG quittait vraiment le Parc des Princes ?</h2>
-            <p>L'élection de Grégoire rouvre le débat. Mais quelles seraient les conséquences économiques et symboliques pour Paris si le PSG venait à partir ?</p>
+            <h2>Municipales 2026 : quelles conséquences si le PSG venait réellement à quitter le Parc des Princes ?</h2>
+            <p>L'élection d'Emmanuel Grégoire rouvre le débat. Mais quelles seraient les conséquences économiques et symboliques pour Paris si le PSG venait à partir ?</p>
             <div class="card-meta"><span>Jonathan Jaar</span><span>·</span><span>Mars 2026</span></div>
           </div>
         </div>
@@ -751,7 +775,7 @@
       <div class="secondary-grid">
         <div class="card small" onclick="showArticle(3)">
           <div class="card-img">
-            <img src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=600&q=75" alt="Gymnase parisien"/>
+            <img src="https://cdn.paris.fr/paris/2023/08/30/original-387826b495d02d28e8e55293edf59c31.jpg" alt="Gymnase parisien"/>
           </div>
           <div class="card-body">
             <span class="card-tag">Politique sportive</span>
@@ -762,11 +786,11 @@
         </div>
         <div class="card small" onclick="showArticle(4)">
           <div class="card-img">
-            <img src="https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=600&q=75" alt="Enfants pratiquant le sport"/>
+            <img src="https://www.leparisien.fr/resizer/NWYVCrNcNcshLClY3sMDofJBoT0=/arc-anglerfish-eu-central-1-prod-leparisien/public/7JXHY2FDKJFPFHIL2VZDMNEFZY.jpg" alt="Enfants pratiquant le sport"/>
           </div>
           <div class="card-body">
             <span class="card-tag">JO 2024</span>
-            <h2>Inégalités sportives à Paris : l'héritage olympique en question</h2>
+            <h2>Les infrastructures sportives de Paris : l'inégalité territoriale comme révélateurpolitique</h2>
             <p>Deux ans après les Jeux, la capitale garantit-elle un accès équitable au sport ? Les chiffres révèlent une fracture territoriale persistante.</p>
             <div class="card-meta"><span>Corentin Martin</span><span>·</span><span>Mars 2026</span></div>
           </div>
@@ -892,7 +916,7 @@
       authorImg: "https://api.dicebear.com/7.x/initials/svg?seed=AD&backgroundColor=C94040",
       excerpt: "Élu le 22 mars 2026 avec 51 % des suffrages, Emmanuel Grégoire hérite d'un paradoxe criant. Capitale mondiale du sport après les JO 2024, Paris reste l'une des villes les plus sous-dotées de France en équipements sportifs.",
       body: `
-        <h2><i>Élu le 22 mars 2026 avec 51 % des suffrages, Emmanuel Grégoire hérite d'un paradoxe criant. Capitale mondiale du sport après les JO 2024, Paris reste l'une des villes les plus sous-dotées de France en terme d'équipements sportifs. Un retard structurel dont le coût économique est, lui, bien réel.</i></h2>
+        <p>Élu le 22 mars 2026 avec 51 % des suffrages, Emmanuel Grégoire hérite d'un paradoxe criant. Capitale mondiale du sport après les JO 2024, Paris reste l'une des villes les plus sous-dotées de France en terme d'équipements sportifs. Un retard structurel dont le coût économique est, lui, bien réel.</p>
 
         <div class="article-img-block">
           <img src="https://img.lemde.fr/2026/03/23/0/0/5500/3667/664/0/75/0/96afcad_upload-1-8sihgq6hw7iq-ad082-municipales-ii-dsc06390.jpg" alt="Emmanuel Grégoire" />
@@ -902,6 +926,7 @@
         <p>Paris dispose de seulement 14 équipements sportifs pour 10 000 habitants, contre 46 en moyenne nationale. Plus parlant encore, la capitale n'offre qu'1 m² d'espace sportif par habitant, quand la moyenne de la banlieue proche atteint 3 m². Ce différentiel se traduit directement en manque à gagner pour l'économie sportive locale.</p>
 
         <h3>Des équipements insuffisants face à la demande</h3>
+        <br>
 
         <div class="pull-stat">
           <span class="stat-num">14</span>
@@ -916,6 +941,7 @@
         </div>
 
         <h3>Le coût exorbitant de nouvelles infrastructures</h3>
+        <br>
 
         <p>Construire à Paris coûte une fortune. Le coût moyen au m² d'un centre aquatique neuf a bondi de 1 634 € HT dans les années 2000 à plus de 3 100 € HT aujourd'hui, soit une hausse de 90 % en vingt-cinq ans. Une piscine représente en moyenne 600 000 € de charges annuelles, contre 88 000 € pour un gymnase (DGCL - BIS n°205, fév. 2026). Et l'État se désengage. Les aides nationales vers les piscines sont passées de 20 millions en 2025 à 10 millions dans le Projet de loi de finances 2026.</p>
 
@@ -942,24 +968,29 @@
       author: "Louison Perard",
       date: "Mars 2026",
       readTime: "6 min",
-      image: "https://images.unsplash.com/photo-1529900748604-07564a03e7a6?w=1200&q=80",
+      image: "https://mesinfos.fr/content/articles/246/A48246/initial-belleville-foot-montae-u15.jpg",
       imgCaption: "Un terrain de football amateur parisien — illustration",
       authorImg: "https://api.dicebear.com/7.x/initials/svg?seed=LP&backgroundColor=C94040",
       excerpt: "À Paris, ville de deux millions de sportifs en manque de terrains, le nouveau maire Emmanuel Grégoire hérite d'un déficit structurel en équipements de proximité.",
       body: `
-        <p>Reynald attend depuis le mois de septembre. Président du FC Belleville, un club de football amateur du 20e arrondissement, il a déposé sa demande de créneau supplémentaire auprès de la mairie il y a six mois. Ses 140 licenciés se partagent deux heures d'entraînement par semaine sur un terrain synthétique défraîchi. <em>« Les gamins se changent dehors, même en hiver. »</em> À trois kilomètres, le Parc des Princes s'illumine chaque semaine pour 48 000 spectateurs.</p>
+        <p> À Paris, ville de deux millions de sportifs en manque de terrains, le nouveau maire Emmanuel Grégoire hérite dès ce printemps 2026 d'un déficit structurel en équipements de proximité, que les municipales n'ont pas suffià mettre au coeur du débat.</p>
 
         <div class="article-img-placeholder">
+          <img src="https://mesinfos.fr/content/articles/246/A48246/initial-belleville-foot-montae-u15.jpg" alt="Terrain de foot amateur parisien" />
           <span>Photo — Terrain de football amateur parisien</span>
         </div>
 
-        <h2>Une ville sous-dotée : les chiffres d'abord</h2>
-
-        <p>Paris dispose de 41 piscines municipales, 143 gymnases et quatre grands stades pour 2,1 millions d'habitants, très en dessous de la moyenne nationale de 41 équipements pour 10 000 habitants, selon le Recensement des Équipements Sportifs du ministère des Sports. Selon l'Institut Paris Région, la capitale n'offre qu'un mètre carré d'espace sportif par habitant, contre trois en petite couronne. Et 75 % des équipements français ont plus de vingt ans.</p>
+        <p>Reynald attend depuis le mois de septembre. Président du FC Belleville, un club de football amateur du 20e arrondissement, il a déposé sa demande de créneau supplémentaire auprès de la mairie il y a six mois. Ses 140 licenciés se partagent deux heures d'entraînement par semaine sur un terrain synthétique défraîchi. <em>« Les gamins se changent dehors, même en hiver. »</em> À trois kilomètres, le Parc des Princes s'illumine chaque semaine pour 48 000 spectateurs.</p>
 
         <div class="article-img-placeholder">
+          <img src="images/espace_sport_habitant.png" alt="Espace sportif par habitant" />
           <span>Graphique — Espace sportif par habitant (Paris vs petite couronne vs Moyenne France)</span>
         </div>
+
+        <h3>Une ville sous-dotée : les chiffres d'abord</h3>
+        <br>
+
+        <p>Paris dispose de 41 piscines municipales, 143 gymnases et quatre grands stades pour 2,1 millions d'habitants, très en dessous de la moyenne nationale de 41 équipements pour 10 000 habitants, selon le Recensement des Équipements Sportifs du ministère des Sports. Selon l'Institut Paris Région, la capitale n'offre qu'un mètre carré d'espace sportif par habitant, contre trois en petite couronne. Et 75 % des équipements français ont plus de vingt ans. Paris n'échappe pas à ce vieillissement. Certains gymnases datent des années 1970.</p>
 
         <div class="pull-stat">
           <span class="stat-num">1 m²</span>
@@ -967,28 +998,36 @@
         </div>
 
         <div class="article-img-placeholder">
+          <img src="images/espace_sport_habitant_bis.png" alt="Espace sportif par habitant" />
           <span>Graphique — Équipements sportifs pour 10 000 habitants (grandes métropoles françaises)</span>
         </div>
 
         <p>Pour les clubs amateurs, tout cela se traduit en une seule réalité : les créneaux manquent. <em>« On est en concurrence permanente avec les écoles, les associations, les cours particuliers »</em>, résume Reynald.</p>
 
-        <h2>Un débat capté par le Parc des Princes</h2>
+        <h3>Un débat capté par le Parc des Princes</h3>
+        <br>
 
-        <p>Pendant des mois, la question sportive dans la campagne municipale s'est concentrée sur un seul dossier : la vente éventuelle du Parc des Princes au PSG. Emmanuel Grégoire, élu maire le 22 mars, a proposé d'en réinjecter les recettes dans le sport de proximité et la végétalisation de la ville.</p>
+        <p>Pendant des mois, la question sportive dans la campagne municipale s'est concentrée sur un seul dossier : la vente éventuelle du Parc des Princes au PSG. Emmanuel Grégoire, élu maire le 22 mars, a proposé d'en réinjecter les recettes dans le sport de proximité et la végétalisation de la ville, une piste qui illustre à la fois l'ampleur du besoin et la difficulté à le financer autrement. </p>
 
+        <p> Début mars, Grégoire avait lui-même posé le diagnostic dans les colonnes de 20
+        Minutes :
         <blockquote>« On reste une ville sous-dotée en infrastructures. On a un déficit sur les terrains de grands jeux avec une demande de créneaux à laquelle on ne peut pas répondre. » — Emmanuel Grégoire, mars 2026</blockquote>
 
-        <h2>Construire en hauteur : une piste sérieuse</h2>
+        <h3>Construire en hauteur : une piste sérieuse</h3>
+        <br>
 
-        <p>Sa réponse tient en une image : des gymnases construits sur plusieurs étages, faute de foncier disponible au sol. Grégoire propose aussi d'étendre les horaires d'ouverture et de développer la pratique mixte pour mieux utiliser l'existant. Berlin ou Amsterdam expérimentent ce type d'équipements verticaux avec des résultats encourageants.</p>
+        <p>Sa réponse tient en une image : des gymnases construits sur plusieurs étages, faute de foncier disponible au sol. Grégoire propose aussi d'étendre les horaires d'ouverture et de développer la pratique mixte pour mieux utiliser l'existant. Berlin ou Amsterdam expérimentent ce type d'équipements verticaux avec des résultats encourageants. Paris pourrait s'en inspirer, à condition d'y consacrer les moyens nécessaires. </p>
 
         <p><em>« Paris a historiquement sous-investi dans les équipements de pratique populaire »</em>, analyse Patrick Bayeux, consultant en politiques sportives. <em>« Les JO ont offert une vitrine extraordinaire, mais l'héritage pour le sport du quotidien reste à construire. »</em></p>
 
-        <p>Ce mardi soir, Reynald regarde ses joueurs s'entraîner sous les néons d'un gymnase partagé avec deux autres associations. <em>« On nous a promis des créneaux à chaque élection. Ce qui change, c'est le nom du maire. »</em> Le nouveau dispose de six ans pour lui donner tort.</p>
+        <p>Ce mardi soir, Reynald regarde ses joueurs s'entraîner sous les néons d'un gymnase
+partagé avec deux autres associations. Il a appris l'élection de Grégoire dans la matinée.
+« On nous a promis des créneaux à chaque élection. Ce qui change, c'est le nom du maire. »
+Le nouveau dispose de six ans pour lui donner tort.</p>
 
         <p style="text-align:right;font-style:italic;color:var(--muted);">Louison Perard</p>
       `,
-      tags: ["Paris", "Sport amateur", "Équipements", "Grégoire", "JO 2024"],
+      tags: ["Paris", "Sport amateur", "Équipements", "Emmanuel Grégoire", "JO 2024"],
       comments: [
         { name: "Reynald F.", date: "25 mars 2026", text: "En tant que président de club amateur, cet article touche exactement à notre réalité quotidienne.", likes: 34 },
         { name: "Clara B.", date: "24 mars 2026", text: "L'image des gamins qui se changent dehors en hiver résume tout.", likes: 27 },
@@ -997,7 +1036,7 @@
     {
       id: 2,
       tag: "PSG",
-      title: "Municipales 2026 : et si le PSG quittait <em>vraiment le Parc des Princes</em> ?",
+      title: "Municipales 2026 : quelles conséquences si le PSG venait réellement à <em>quitter le Parc des Princes</em> ?",
       author: "Jonathan Jaar",
       date: "Mars 2026",
       readTime: "7 min",
@@ -1006,13 +1045,31 @@
       authorImg: "https://api.dicebear.com/7.x/initials/svg?seed=JJ&backgroundColor=C94040",
       excerpt: "L'élection d'Emmanuel Grégoire pourrait rouvrir le débat sur le Parc des Princes. Mais quelles seraient les conséquences pour Paris si le PSG venait réellement à partir ?",
       body: `
-        <p>Après 6 ans de gouvernance d'Anne Hidalgo à la mairie de Paris, les discussions autour de la vente du Parc des Princes au club du Paris-Saint-Germain avaient atteint un point de non-retour, laissant penser à un départ définitif de l'enceinte mythique. Mais l'élection d'Emmanuel Grégoire dimanche dernier pourrait rouvrir le débat.</p>
+        <p>Après 6 ans de gouvernance d’Anne Hidalgo à la mairie de Paris, les discussions
+autour de la vente du Parc des Princes au club du Paris-Saint-Germain avaient
+atteint un point de non-retour, laissant penser à un départ définitif de l’enceinte
+mythique. Mais l’élection d’Emmanuel Grégoire dimanche dernier pourrait rouvrir
+le débat, alors quelles seraient les conséquences pour la ville de Paris si le Parc
+des Princes était laissé vacant par le PSG ?</p>
 
-        <p>Le ton est donné depuis longtemps du côté du club. Nasser Al-Khelaïfi a tranché publiquement : <em>« C'est fini, on veut bouger du Parc des Princes. »</em> En cause : une enceinte plafonnée à 48 583 places, affichant complet depuis 170 matchs consécutifs, et dont le club ne peut acquérir la propriété.</p>
+        <p>Le ton est donné depuis longtemps du côté du club. Nasser Al-Khelaïfi a tranché
+publiquement : "C'est fini, on veut bouger du Parc des Princes." En cause : une enceinte
+plafonnée à 48 583 places, affichant complet depuis 170 matchs consécutifs, et dont le
+club ne peut acquérir la propriété. L'ancienne majorité d'Anne Hidalgo a toujours refusé
+de céder l'équipement. Résultat : le PSG prospecte en banlieue, à Massy, à Poissy, avec
+le soutien de Valérie Pécresse.
+</p>
 
-        <h2>Ce que Paris perdrait : le calcul est brutal</h2>
+        <h3>Ce que Paris perdrait : le calcul est brutal</h3>
+        <br>
 
-        <p>Sur le strict plan financier, la mairie perçoit aujourd'hui 1 million d'euros de loyer annuel, auxquels s'ajoutent entre 3 % et 7 % des revenus générés au stade. Le PSG ayant atteint 175 millions d'euros de revenus « matchday » en 2024-2025, la part reversée à la Ville représente entre 5,25 et 12,25 millions d'euros par an.</p>
+        <p>Sur le strict plan financier, la mairie perçoit aujourd'hui 1 million d'euros de loyer
+annuel, auxquels s'ajoutent entre 3 % et 7 % des revenus générés au stade. Le PSG
+ayant atteint 175 millions d'euros de revenus "matchday" en 2024-2025 — billetterie,
+hospitalité, restauration la part reversée à la Ville représente entre 5,25 et 12,25
+millions d'euros par an. En retenant une moyenne de 8 millions, le manque à gagner
+direct pour Paris sur 10 ans atteindrait <b>90 millions d'euros</b>. Une somme qui ne tient pas
+compte de la dynamique haussière : ces revenus ont été multipliés par 7 depuis 2011.</p>
 
         <div class="pull-stat">
           <span class="stat-num">90 M€</span>
@@ -1020,24 +1077,47 @@
         </div>
 
         <div class="article-img-placeholder">
+          <img src="images/manque_revenus_psg.png" alt="Manque à gagner pour la Mairie de Paris si le PSG quitte le Parc des Princes" />
           <span>Graphique — Manque à gagner pour la Mairie de Paris si le PSG quitte le Parc des Princes (2026-2035)</span>
         </div>
 
-        <p>Mais le vrai gouffre est indirect. Selon une étude du CDES (2024), l'activité du PSG génère un impact économique de 243 millions d'euros dans la région et soutient plus de 2 300 emplois. Hôtels, restaurants, commerces du 16e arrondissement, transports — tout un écosystème vit au rythme des jours de match.</p>
+        <p>Mais le vrai gouffre est indirect. Selon une étude du CDES (2024), l'activité du PSG
+génère un impact économique de 243 millions d'euros dans la région et soutient plus de
+2 300 emplois. Hôtels, restaurants, commerces du 16e arrondissement, transports tout
+un écosystème vit au rythme des jours de match. Un déménagement en grande
+banlieue déplacerait ce flux économique hors de Paris.</p>
 
-        <h2>Un symbole qui n'a pas de prix</h2>
+        <h3>Un symbole qui n'a pas de prix</h3>
+        <br>
 
-        <p>Le Parc des Princes, ce n'est pas qu'une enceinte sportive. C'est soixante ans de mémoire collective, de culture ultras, de nuits européennes gravées dans l'histoire du football français.</p>
+        <p>Le Parc des Princes, ce n'est pas qu'une enceinte sportive. C'est soixante ans de
+mémoire collective, de culture ultras, de nuits européennes gravées dans l'histoire du
+football français. Laisser partir le PSG reviendrait à accepter qu'une métropole de rang
+mondial ne soit plus capable de retenir ses propres institutions sportives un signal
+désastreux, à l'heure où Londres, Munich ou Madrid investissent massivement pour
+ancrer leurs clubs au cœur de la ville.</p>
 
-        <blockquote>Laisser partir le PSG reviendrait à accepter qu'une métropole de rang mondial ne soit plus capable de retenir ses propres institutions sportives — un signal désastreux, à l'heure où Londres, Munich ou Madrid investissent massivement pour ancrer leurs clubs au cœur de la ville.</blockquote>
+<p>Sans son locataire historique, le stade du 16e arrondissement se retrouverait orphelin.
+Événements culturels ponctuels, matchs des équipes féminines, quelques rencontres
+de l'équipe de France : autant de rustines insuffisantes pour combler le vide laissé par
+vingt-cinq à trente journées de championnat et des soirées de Ligue des Champions. La
+question de la reconversion d'un stade de 48 000 places sans club résident est, en ellemême, un gouffre budgétaire en puissance.</p>
 
-        <h2>Les municipales comme dernière fenêtre</h2>
+        <h3>Les municipales comme dernière fenêtre</h3>
+        <br>
 
-        <p>Élu avec 50,52 % des voix, Emmanuel Grégoire a rompu avec la ligne dure de son prédécesseur et s'est dit ouvert à une cession au juste prix, sous réserve d'un vote du Conseil de Paris. Une main tendue mais dont la portée reste limitée dans le temps.</p>
+        <p>Le changement de majorité à l'Hôtel de Ville redistribue les cartes. Élu avec 50,52 % des
+voix, Emmanuel Grégoire a rompu avec la ligne dure de son prédécesseur et s'est dit
+ouvert à une cession au juste prix, sous réserve d'un vote du Conseil de Paris. Une main
+tendue mais dont la portée reste limitée dans le temps. Le PSG avance en parallèle sur
+ses pistes alternatives en grande couronne, et chaque semaine qui passe consolide un
+peu plus l'option banlieue.</p>
 
-        <p>Le nouveau maire dispose d'une fenêtre. Étroite. Historique. Il lui reste à décider si Paris veut être une ville qui accompagne ses ambitions sportives ou une ville qui les regarde partir.</p>
+        <p>Le nouveau maire dispose d'une fenêtre. Étroite. Historique. Il lui reste à décider si Paris
+veut être une ville qui accompagne ses ambitions sportives ou une ville qui les regarde
+partir.</p>
       `,
-      tags: ["PSG", "Parc des Princes", "Grégoire", "Municipales", "Paris"],
+      tags: ["PSG", "Parc des Princes", "Emmanuel Grégoire", "Municipales", "Paris"],
       comments: [
         { name: "Marc D.", date: "25 mars 2026", text: "90 millions sur 10 ans c'est énorme, mais l'impact indirect est encore plus massif.", likes: 41 },
         { name: "Julie P.", date: "24 mars 2026", text: "Grégoire a une fenêtre très courte pour agir. Le PSG ne va pas attendre.", likes: 22 },
@@ -1050,45 +1130,123 @@
       author: "Laurent Riche Van Aerde",
       date: "Mars 2026",
       readTime: "8 min",
-      image: "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=1200&q=80",
+      image: "https://cdn.paris.fr/paris/2023/08/30/original-387826b495d02d28e8e55293edf59c31.jpg",
       imgCaption: "Infrastructures sportives parisiennes — illustration",
       authorImg: "https://api.dicebear.com/7.x/initials/svg?seed=LR&backgroundColor=C94040",
       excerpt: "Terrains sur les toits, bureaux reconvertis, égalité hommes-femmes dans l'espace public, dialogue renoué avec le PSG… Les ambitions sportives d'Emmanuel Grégoire tiennent-elles la route ?",
       body: `
-        <p>Avec les municipales de 2026 en ligne de mire, Emmanuel Grégoire, candidat de la gauche unie, a fait du sport un axe fort de son programme. Terrains sur les toits, bureaux reconvertis, égalité hommes-femmes dans l'espace public, dialogue renoué avec le PSG… Dans une ville dense et financièrement contrainte, ces ambitions tiennent-elles la route ?</p>
+        <h3>Les promesses d'Emmanuel Grégoire à l'épreuve du terrain</h3>
+        <br>
+        <p>Avec les municipales de 2026 en ligne de mire, Emmanuel Grégoire,
+candidat de la gauche unie, fait du sport un axe fort de son
+programme. Terrains sur les toits, bureaux reconvertis, égalité
+hommes-femmes dans l'espace public, dialogue renoué avec le PSG…
+Dans une ville dense et financièrement contrainte, ces ambitions
+tiennent-elles la route ?
+</p>
 
         <div class="article-img-placeholder">
-          <span>Infographie — Paris manque d'infrastructures sportives (Municipales 2026 — Programme Emmanuel Grégoire)</span>
+          <img src="https://cdn.paris.fr/paris/2023/08/30/original-387826b495d02d28e8e55293edf59c31.jpg" alt="Infrastructures sportives parisiennes" />
+          <span>Photo — Infrastructures sportives parisiennes</span>
         </div>
 
-        <h2>Une ville à bout de souffle sportif</h2>
+        <h3>Une ville à bout de souffle sportif</h3>
+        <br>
 
-        <p>Le constat est brutal. Avec 2,7 équipements sportifs pour 10 000 habitants, Paris se situe loin sous la moyenne nationale de 4,4 selon l'APUR. Dans les arrondissements populaires comme le 19e ou le 18e, les créneaux municipaux se réservent 6 à 8 mois à l'avance, et le taux d'occupation des gymnases dépasse 95 % en semaine.</p>
+        <p>Le constat est brutal. Avec 2,7 équipements sportifs pour 10 000 habitants, Paris se
+situe loin sous la moyenne nationale de 4,4 selon l'APUR. Dans les arrondissements
+populaires comme le 19e ou le 18e, les créneaux municipaux se réservent 6 à 8
+mois à l'avance, et le taux d'occupation des gymnases dépasse 95 % en semaine.
+Paris intra-muros ne couvre que 105 km², dont plus de 70 % est déjà bâti. Construire
+au sol relève de l'utopie foncière. D'où l'idée d'aller chercher de l'espace ailleurs : en
+hauteur, et dans les friches tertiaires.
+</p>
+
+        <div class="article-img-placeholder">
+          <img src="images/manque_infrastructures_sportives.png" alt="Paris manque d'infrastructures sportives" />
+          <span>Infographie — Paris manque d'infrastructures sportives (Municipales 2026 — Programme Emmanuel Grégoire)</span>
+        </div>
 
         <div class="pull-stat">
           <span class="stat-num">95 %</span>
           <span class="stat-label">taux d'occupation des gymnases parisiens en semaine — proches de la saturation totale</span>
         </div>
 
-        <h2>Des terrains sur les toits : séduisant mais complexe</h2>
+        <h3>Des terrains sur les toits : séduisant mais complexe</h3>
+        <br>
 
-        <p>Installer des terrains de foot, de padel ou de five sur les toits de bâtiments existants — la proposition fait rêver. Mais un terrain de five synthétique peut peser 15 à 25 tonnes, et le renforcement des structures multiplierait le coût d'un projet par 3 ou 4. L'accessibilité reste un autre obstacle : ascenseurs sous-dimensionnés, issues de secours absentes, nuisances sonores.</p>
+        <p>Installer des terrains de foot, de padel ou de five sur les toits de bâtiments existants
+la proposition fait rêver. Mais un terrain de five synthétique peut peser 15 à 25
+tonnes, et le renforcement des structures multiplierait le coût d'un projet par 3 ou 4
+selon plusieurs cabinets d'architecture. L'accessibilité reste un autre obstacle :
+ascenseurs sous-dimensionnés, issues de secours absentes, nuisances sonores
+pour les résidents des derniers étages</p>
 
-        <p>La reconversion de bureaux vacants est une piste plus concrète. Paris Région estime à 4,2 millions de m² les surfaces de bureaux inoccupées en Île-de-France, avec un taux de vacance atteignant 9 % en 2025.</p>
+        <p>La reconversion de bureaux vacants est une piste plus concrète. Paris Région estime
+à 4,2 millions de m² les surfaces de bureaux inoccupées en Île-de-France, avec un
+taux de vacance atteignant 9 % en 2025, un record depuis vingt ans. Transformer
+ces espaces en équipements sportifs de proximité reste cependant soumis à de
+longues négociations avec des propriétaires privés.
+</p>
 
-        <h2>Le sport féminin : l'espace public reste inégal</h2>
+        <h3>Le sport féminin : l'espace public reste inégal</h3>
+        <br>
 
-        <p>Derrière les équipements, il y a une inégalité structurelle. Selon le Centre Hubertine-Auclert, 80 à 90 % des city stades parisiens sont majoritairement occupés par des garçons. Les femmes ne représentent que 38 % des licenciés sportifs à Paris, malgré une population féminine légèrement majoritaire dans la capitale.</p>
+        <p>Derrière les équipements, il y a une inégalité structurelle. Selon le Centre HubertineAuclert, 80 à 90 % des city stades parisiens sont majoritairement occupés par des
+garçons. Les femmes ne représentent que 38 % des licenciés sportifs à Paris, malgré
+une population féminine légèrement majoritaire dans la capitale. Grégoire propose
+un plan d'éclairage couvrant 100 % des espaces extérieurs d'ici 2028, le
+renforcement de la police municipale aux abords des équipements le soir, et
+l'installation d'agrès polyvalents dans au moins 50 jardins publics par an. La
+question dépasse les seuls équipements : c'est l'appropriation de l'espace public qui
+est en jeu.</p>
+
+          <h3>Les clubs de quartier : piliers fragiles</h3>
+        <br>
+          <p>Paris compte 2 200 associations sportives pour 2,1 millions d'habitants, dont
+beaucoup survivent avec des budgets précaires. L'Espérance du 19e, la Camillienne
+du 12e, les clubs du 15e : ces structures citées dans le programme Grégoire font
+face aux mêmes problèmes : créneaux rares, locaux vétustes, financements en
+berne. Le candidat promet un fonds d'urgence de 5 millions d'euros et un soutien
+renforcé au PUC et à l'Atlético Paris 13. Mais il l'admet lui-même : « Je n'ai pas
+d'argent magique. » La Ville de Paris consacre aujourd'hui 240 millions d'euros par
+anau sport, soit moins de 5 % du budget municipal.
+</p>
 
         <blockquote>« Je n'ai pas d'argent magique. » — Emmanuel Grégoire, sur le financement du sport à Paris</blockquote>
 
-        <h2>Des ambitions réelles, des obstacles concrets</h2>
+        <h3>Le dossier PSG</h3>
+        <br>
+        <p>Le Parc des Princes (47 929 places), propriété de la Ville, est au cœur d'un bras
+de fer depuis des années. Le PSG réclame une capacité de 60 000 à 65 000
+places. Grégoire promet de « renouer le dialogue dans les 100 premiers jours »
+de son mandat — un enjeu autant politique que sportif, lié à quelque 1 500
+emplois dans le 16e arrondissement.
+</p>
+        <h3>Des ambitions réelles, des obstacles concrets</h3>
+        <br>
 
-        <p>Avec 46 % des Parisiens déclarant ne pratiquer aucune activité physique régulière (INSEE, 2024), l'enjeu est colossal. Pour qu'une ville de 2,1 millions d'habitants devienne une vraie capitale du sport populaire, il faudra des arbitrages budgétaires courageux et une volonté politique qui dure bien au-delà du temps d'une campagne.</p>
+        <p>Le programme de Grégoire repose sur un diagnostic juste : Paris accumule des
+décennies de retard. Les intentions sont louables : réduire les inégalités,
+moderniser les infrastructures, soutenir les clubs de quartier. Mais entre le
+discours de campagne et la réalité du terrain, le fossé reste considérable. Les
+terrains sur les toits sont coûteux et limités. La reconversion des bureaux
+dépend de négociations longues. Et la lutte pour l'espace public féminin
+nécessite un changement culturel que les équipements seuls ne suffiront pas à
+provoquer.
+Avec 46 % des Parisiens déclarant ne pratiquer aucune activité physique
+régulière (INSEE, 2024), l'enjeu est colossal. Pour qu'une ville de 2,1 millions
+d'habitants devienne une vraie capitale du sport populaire, il faudra des
+arbitrages budgétaires courageux et une volonté politique qui dure bien au-delà
+du temps d'une campagne.</p>
+
+<p><em>Sources : APUR, Centre Hubertine-Auclert, INSEE, Paris Région, Observatoire de l'immobilier d'Île-de-France, programme
+d'Emmanuel Grégoire.</em></p>
+
 
         <p style="text-align:right;font-style:italic;color:var(--muted);">Par Laurent Riche Van Aerde · Master de journalisme · Mars 2026</p>
       `,
-      tags: ["Paris", "Grégoire", "Sport féminin", "Infrastructures", "Bureaux"],
+      tags: ["Paris", "Emmanuel Grégoire", "Sport féminin", "Infrastructures", "Bureaux"],
       comments: [
         { name: "Amina T.", date: "25 mars 2026", text: "Le point sur le sport féminin est crucial et souvent oublié dans ce débat.", likes: 38 },
         { name: "Thomas R.", date: "24 mars 2026", text: "Les toits, c'est une belle idée en théorie. Mais le rapport coût/bénéfice semble catastrophique.", likes: 19 },
@@ -1097,30 +1255,93 @@
     {
       id: 4,
       tag: "JO 2024",
-      title: "Inégalités sportives à Paris : <em>l'héritage olympique en question</em>",
+      title: "Les infrastructures sportives de Paris : <em> l'inégalité territoriale </em> comme révélateur politique",
       author: "Corentin Martin",
       date: "Mars 2026",
       readTime: "9 min",
-      image: "https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=1200&q=80",
+      image: "https://www.leparisien.fr/resizer/NWYVCrNcNcshLClY3sMDofJBoT0=/arc-anglerfish-eu-central-1-prod-leparisien/public/7JXHY2FDKJFPFHIL2VZDMNEFZY.jpg",
       imgCaption: "Enfants pratiquant le football dans une salle parisienne — illustration",
       authorImg: "https://api.dicebear.com/7.x/initials/svg?seed=CM&backgroundColor=C94040",
       excerpt: "Quelques jours après les municipales du 22 mars 2026, le débat sur les équipements sportifs de Paris illustre une fracture profonde : une ville qui promeut le sport pour tous, mais qui peine structurellement à le garantir.",
       body: `
-        <p>Le 23 janvier 2022, une bagarre éclate sur la pelouse du stade Bertrand-Dauvin, dans le XVIIIe arrondissement. Bilan : trois personnes hospitalisées. La cause ? Pas un enjeu sportif, pas une rivalité entre clubs, mais simplement un désaccord sur les horaires de partage du terrain. À quelques kilomètres de là, dans le XIIIe, les moins de 9 ans de l'Entente Paris 13 s'entraînent dans une salle de Five privée, faute de terrain municipal disponible.</p>
+
+        <p>Quelques jours après les municipales du 22 mars 2026, le débat sur les équipements sportifs de Paris illustre une fracture profonde : une ville qui promeut le sport pour tous, mais qui peine structurellement à le garantir. Entre promesses olympiques et réalité quotidienne, la question des infrastructures devient un révélateur politique majeur.</p>
+        <p>Le 23 janvier 2022, une bagarre éclate sur la pelouse du stade Bertrand-Dauvin, dans le XVIIIe
+arrondissement. Bilan : trois personnes hospitalisées. La cause ? Pas un enjeu sportif, pas une
+rivalité entre clubs, mais simplement un désaccord sur les horaires de partage du terrain. À
+quelques kilomètres de là, dans le XIIIe, les moins de 9 ans de l'Entente Paris 13 s'entraînent dans
+une salle de Five privée, faute de terrain municipal disponible (Derrière ces deux scènes du
+quotidien sportif parisien, le même constat : Paris est l'une des métropoles européennes les moins
+bien dotées en équipements sportifs rapportés à sa population. Alors, deux ans après avoir
+accueilli les Jeux Olympiques et Paralympiques, la capitale garantit-elle vraiment un accès équitable
+au sport à tous ses habitants ?
+</p>
 
         <div class="article-img-placeholder">
+          <img src="https://www.leparisien.fr/resizer/NWYVCrNcNcshLClY3sMDofJBoT0=/arc-anglerfish-eu-central-1-prod-leparisien/public/7JXHY2FDKJFPFHIL2VZDMNEFZY.jpg" alt="Enfants pratiquant le football dans une salle parisienne" />
           <span>Photo — Enfants pratiquant le football dans une salle parisienne</span>
         </div>
 
         <h2>Une ville à deux vitesses</h2>
 
-        <p>Paris compte plus de 300 centres sportifs municipaux. Ces sites sont aujourd'hui très sollicités : 3,3 millions d'heures de créneaux sportifs ont été attribués par la Ville pour la saison 2023-2024. Mais derrière ce volume global se dissimule une réalité géographique bien moins reluisante.</p>
+        <p>Paris compte plus de 300 centres sportifs
+municipaux regroupant stades, piscines,
+gymnases, courts de tennis et terrains
+d'éducation physique en plein air. Ces sites
+sont aujourd'hui très sollicités : 3,3 millions
+d'heures de créneaux sportifs ont été attribués
+par la Ville pour la saison 2023-2024.
+Une ville à deux vitesses Mais derrière ce volume global se
+dissimule une réalité géographique bien
+moins reluisante.
+</p>
 
-        <p>Concrètement, 42 % des associations disposent de moins de 5 heures par semaine, quand 20 % d'entre elles bénéficient de 20 heures ou plus. Les 19e, 20e et 13e, en bordure de la ceinture verte, sont mieux dotés en équipements de plein air que les arrondissements centraux.</p>
+        <p>la Ville de Paris n'est pas en mesure de
+satisfaire une partie des demandes. En
+2018, c’était 14 équipements sportifs pour
+10 000 habitants alors que la moyenne
+nationale était de 46 pour 10 000 habitants
+d’après une étude de l’INSEE.
+Concrètement, 42 % des associations
+disposent de moins de 5 heures par
+semaine, quand 20 % d'entre elles
+bénéficient de 20 heures ou plus. Une
+inégalité dans l'accès aux créneaux qui
+reflète les disparités entre
+arrondissements : les 19e, 20e et 13e, en
+bordure de la ceinture verte, sont mieux
+dotés en équipements de plein air que les
+arrondissements centraux, où le foncier
+rare et coûteux interdit toute construction
+nouvelle.
+</p>
+<p>
+La question ne se limite pas à un
+déséquilibre entre arrondissements. C'est
+aussi celle des usages. Les gymnases
+multisports affichent des taux d'occupation
+proches de la saturation. D'après une
+étude commandée par le ministère des
+Sports et publiée fin novembre 2025, ces
+infrastructures affichent un taux
+d'occupation de 95 % en semaine, avec une
+durée d'occupation moyenne de 10h12 par
+jour en période scolaire. Le constat est
+structurel et ancien. Sur les 272 000
+équipements sportifs bâtis dont les
+collectivités sont propriétaires, 61 % ont
+plus de 25 ans, et un sur cinq a même été
+construit avant 1975.</p>
 
         <div class="article-img-placeholder">
+          <img src="images/Équipements_par_arrondissement.png" alt="Équipements sportifs par arrondissement" />
           <span>Graphique — Équipements par arrondissement (nombre d'équipements)</span>
         </div>
+        <p><b>Équipements par arrondissement</b> : le graphique en barres colorées montre l'écart brut
+entre les arrondissements. Les arrondissements centraux (bleu, 1er–9e) sont
+structurellement sous-dotés en nombre absolu, tandis que les grands arrondissements
+périphériques (vert, 10e–20e) cumulent davantage d'équipements, mais avec une
+population bien plus dense.</p>
 
         <div class="pull-stat">
           <span class="stat-num">61 %</span>
@@ -1128,30 +1349,111 @@
         </div>
 
         <div class="article-img-placeholder">
+          <img src="images/Ratio_habitants_equipements_par_arrondissement.png" alt="Ratio habitants/équipements par arrondissement" />
           <span>Graphique — Ratio habitants/équipements par arrondissement</span>
         </div>
 
-        <h2>L'héritage olympique : promesses et réalité</h2>
+        <p><b>Ration habitants/équipements</b> c'est le graphique le plus révélateur. Croiser le nombre
+d'équipements avec la population réelle fait apparaître les vrais « déserts sportifs » : le 10e,
+le 11e et le 18e passent au rouge malgré un nombre absolu d'équipements correct.</p>
 
-        <p>L'organisation des Jeux de Paris 2024 devait changer la donne. Depuis 2020, 175 projets de création et de rénovation d'équipements sportifs ont été initiés par la Ville de Paris, dont 91 livrés en mai 2023 et 55 livrés avant l'été 2024. À l'échelle du Grand Paris, ce sont 691 projets d'équipements sportifs qui ont été recensés, dont 134 constructions neuves.</p>
+        <h3>L'héritage olympique : promesses et réalité</h3>
+        <br>
+        <p>L'organisation des Jeux de Paris 2024
+devait changer la donne. La promesse était
+double : rénover massivement, et ouvrir les
+équipements aux clubs amateurs et aux
+habitants des quartiers populaires. Depuis
+2020, 175 projets de création et de
+rénovation d'équipements sportifs ont été
+initiés par la Ville de Paris, dont 91 livrés en
+mai 2023 et 55 livrés avant l'été 2024. À
+l'échelle du Grand Paris, ce sont 691
+projets d'équipements sportifs qui ont été
+recensés, dont 134 constructions neuves
+comme le Centre Aquatique Olympique ou
+l'Arena Porte de la Chapelle.</p>
 
-        <p>Ces chiffres sont réels. Mais ils masquent une tension persistante entre la vitrine olympique et la pratique quotidienne. L'Arena, rebaptisée adidas arena après les Jeux, est devenue le fief du Paris Basketball Club et accueille concerts et congrès. Deux gymnases adjacents ont été mis à disposition des habitants. Deux gymnases pour un quartier parmi les plus denses de la capitale.</p>
+        <p>Ces chiffres sont réels. Mais ils masquent
+une tension persistante entre la vitrine
+olympique et la pratique quotidienne.
+L'Arena, rebaptisée adidas arena après les
+Jeux, est devenue le fief du Paris Basketball
+Club et accueille concerts et congrès. Deux
+gymnases adjacents ont été mis à
+disposition des habitants pour répondre
+aux besoins du quartier. Deux gymnases
+pour un quartier parmi les plus denses de
+la capitale. Le constat parle de lui-même.</p>
 
-        <h2>Les municipales 2026 : qui propose quoi ?</h2>
+<p>L'effet des Jeux a lui-même aggravé la
+pression sur les infrastructures. Avec 17,2
+millions de licences distribuées en 2024, en
+hausse de 3,8 % par rapport à 2023, les
+Français ont massivement voulu faire du
+sport. Mais Paris n'avait pas les
+équipements nécessaires pour répondre à
+la demande. José Delgi Espoti, secrétaire
+général du SCUF, confirme que la situation
+est "tendue" dans toute la région depuis
+Emmanuel Grégoire (PS) Rachida Dati (Droite) Sophia Chikirou (LFI)
+plusieurs années, et que son club ne peut
+plus ajouter une seule personne. Dans
+certaines disciplines, les clubs ont été
+contraints de fermer leurs portes à des
+milliers de nouveaux candidats. À la
+rentrée sportive 2024-2025, la Fédération
+française de basket-ball a dû refuser
+environ 140 000 nouveaux licenciés, ses
+clubs étant dans l'incapacité d'absorber les
+demandes faute d'espace.</p>
 
-        <div class="article-img-placeholder">
-          <span>Photos — Emmanuel Grégoire (PS) / Rachida Dati (Droite) / Sophia Chikirou (LFI)</span>
-        </div>
+        <h3>Les municipales 2026 : qui propose quoi, et est-ce
+réalisable ?</h3>
+<br>
 
-        <p>Concernant les équipements sportifs, les programmes divergent dans leur approche. Emmanuel Grégoire fera du "développement des infrastructures sportives sa priorité". Il envisage de développer des zones d'aires de grand jeu dans les réserves foncières disponibles. Le gouvernement a d'ailleurs fixé un cap dans une circulaire de septembre 2025 : ouvrir aux clubs sportifs, d'ici fin 2027, 100 % des équipements sportifs scolaires disposant de créneaux libres.</p>
 
-        <p>Avec 17,2 millions de licences distribuées en 2024, en hausse de 3,8 % par rapport à 2023, les Français ont massivement voulu faire du sport après les JO. À la rentrée sportive 2024-2025, la Fédération française de basket-ball a dû refuser environ 140 000 nouveaux licenciés, ses clubs étant dans l'incapacité d'absorber les demandes faute d'espace.</p>
+        <p>Concernant les équipements sportifs, les programmes divergent dans leur approche, sans
+que les engagements budgétaires chiffrés ne soient toujours au rendez-vous.</p>
+<p>Parmi les candidats, certains proposent de moderniser les équipements scolaires et
+sportifs en améliorant leur accessibilité et leur proximité. Emmanuel Grégoire, nouveau
+maire de Paris, fera du “développement des infrastructures sportives sa priorité”. Il
+envisage de développer des zones d’aires de grand jeu dans les réserves foncières
+disponibles. D'autres s'appuient sur l’ouverture des gymnases scolaires aux clubs. Le
+gouvernement a d'ailleurs fixé un cap dans une circulaire de septembre 2025 : ouvrir aux
+clubs sportifs, d'ici fin 2027, 100 % des équipements sportifs scolaires disposant de
+créneaux libres. Une mesure utile, mais limitée : elle ne crée pas de mètres carrés
+supplémentaires, elle optimise simplement l'existant. Or, à Paris, même l'existant est
+épuisé.</p>
+<p>La contrainte foncière demeure la réalité la plus cruelle de la politique sportive parisienne.
+Dans une ville où le prix du mètre carré dépasse toute logique d'investissement public
+massif, construire un nouveau gymnase ou une nouvelle piscine revient à trancher entre
+sport et logement, entre terrain de foot et école. </p>
 
-        <h2>Le sport comme révélateur d'un choix de société</h2>
+<div class="article-img-placeholder2">
+  <div class="candidats-grid">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsX6RlqoyfZYksnPdsQizVEbVY5fAc4QBQ5PbfFFPz65ytde_PZIAaM_oVlz1y1Y770uGQdrRNM4_RTZKaV5JBeNGl-Gnyf7Hf0mo0_A&s=10" alt="Emmanuel Grégoire" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/8/88/Rachida_Dati_portrait.jpg" alt="Rachida Dati" />
+    <img src="https://cdn-s-www.vosgesmatin.fr/images/745016C0-701A-46ED-A598-89DB857B9D9E/NW_raw/selon-le-monde-sophia-chikirou-sera-prochainement-entendue-en-vue-d-une-eventuelle-mise-en-examen-pour-escroquerie-aggravee-photo-sipa-isa-harsin-1696339437.jpg" alt="Sophia Chikirou" />
+  </div>
+  <span>Photos — Emmanuel Grégoire (PS) / Rachida Dati (Droite) / Sophia Chikirou (LFI)</span>
+</div>
 
-        <blockquote>Paris ne manque pas de solutions. Elle manque de priorisation et de courage budgétaire.</blockquote>
+        <h3>Le sport comme révélateur d'un choix de société</h3>
+        <br>
 
-        <p>Quel modèle de ville veut-on pour Paris à l'horizon 2030 ? Une capitale de l'excellence sportive internationale, ou une ville où chaque habitant, quel que soit son arrondissement, peut pratiquer une activité physique à moins de dix minutes de chez lui ? L'héritage des Jeux n'attend pas.</p>
+        <p>Alors, Paris manque-t-elle d'infrastructures sportives ? La réponse honnête est : oui,
+structurellement, et de manière inégale selon les territoires. Mais la vraie question n'est
+pas quantitative. Elle est politique. Paris ne manque pas de solutions : l'optimisation des
+gymnases scolaires, le plan 10 000 terrains lancé à l'échelle nationale, les rénovations postJeux, elle manque de priorisation et de courage budgétaire.
+</p>
+
+
+        <p>Quel modèle de ville veut-on pour Paris à l'horizon 2030 ? Une capitale de l'excellence
+sportive internationale, ou une ville où chaque habitant, quel que soit son arrondissement,
+peut pratiquer une activité physique à moins de dix minutes de chez lui ? L'héritage des
+Jeux n'attend pas.
+</p>
 
         <p><em>Sources : APUR, INSEE, Ville de Paris, Le Parisien, Direction de la Jeunesse et des Sports de Paris, Sports.gouv, Franceinfo, INJEP, Préfecture d'Île-de-France, La Gazette des Communes, Associations Mode d'Emploi.</em></p>
 
