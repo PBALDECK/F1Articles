@@ -318,6 +318,45 @@
     .opinion-card .author { font-size: 0.76rem; color: var(--muted); }
 
     /* ══════════════════════════════════════════
+       ABOUT PAGE
+    ══════════════════════════════════════════ */
+    .about-block {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+    .about-img {
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.1);
+    }
+    .about-img img { height: 100%; object-fit: cover; }
+    .about-text h2 {
+      font-family: var(--font-serif);
+      font-size: 2rem;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+    .about-text p {
+      font-size: 0.95rem;
+      color: var(--muted);
+      line-height: 1.8;
+      margin-bottom: 16px;
+    }
+    .about-text .about-philo {
+      margin-top: 12px;
+      padding: 20px 24px;
+      border-left: 4px solid var(--red);
+      background: var(--surface);
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 1rem;
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* ══════════════════════════════════════════
        FOOTER
     ══════════════════════════════════════════ */
     footer {
@@ -616,6 +655,7 @@
       .standings-page { padding: 40px 20px; }
       .form-row { grid-template-columns: 1fr; }
       .back-btn { padding: 20px; }
+      .about-block { grid-template-columns: 1fr; }
     }
 
     /* ── ARTICLE IMG BLOCKS ── */
@@ -665,6 +705,44 @@
       color: var(--muted);
       font-style: italic;
     }
+
+    /* ══════════════════════════════════════════
+       ABOUT PAGE
+    ══════════════════════════════════════════ */
+    .about-block {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+      max-width: 1100px;
+    }
+    .about-img {
+      overflow: hidden;
+      border-radius: 2px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+    .about-img img {
+      height: 400px;
+      object-fit: cover;
+      transition: transform .5s ease;
+    }
+    .about-img:hover img { transform: scale(1.03); }
+    .about-text h2 {
+      font-family: var(--font-serif);
+      font-size: 2rem;
+      line-height: 1.2;
+      margin-bottom: 24px;
+      color: var(--text);
+    }
+    .about-text p {
+      font-size: 1rem;
+      color: var(--muted);
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+    @media (max-width: 900px) {
+      .about-block { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
@@ -678,7 +756,8 @@
       <a href="#" onclick="showPage('home');return false;" id="nav-home" class="active">Actualités</a>
       <a href="#" onclick="showPage('articles');return false;" id="nav-articles">Nos Dossiers</a>
       <a href="#" onclick="showPage('videos');return false;" id="nav-videos">Nos Vidéos</a>
-<a href="#" class="nav-badge">● LIVE</a>
+      <a href="#" onclick="showPage('about');return false;" id="nav-about">Qui sommes-nous</a>
+<a href="https://www.twitch.tv/clicksport" class="nav-badge">● LIVE</a>
     </nav>
   </header>
 
@@ -756,7 +835,7 @@
           </div>
           <div class="card-body">
             <span class="card-tag">JO 2024</span>
-            <h2>Les infrastructures sportives de Paris : l'inégalité territoriale comme révélateurpolitique</h2>
+            <h2>Les infrastructures sportives de Paris : l'inégalité territoriale comme révélateur politique</h2>
             <p>Deux ans après les Jeux, la capitale garantit-elle un accès équitable au sport ? Les chiffres révèlent une fracture territoriale persistante.</p>
             <div class="card-meta"><span>Corentin Martin</span><span>·</span><span>Mars 2026</span></div>
           </div>
@@ -845,8 +924,56 @@
   ══════════════════════════════════════════ -->
   <div class="page" id="page-videos" style="padding-top:90px;">
     <div class="grid-section">
-      <div class="section-label">Nos Vidéos</div>
-      <div id="videos-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:2px;margin-bottom:80px;"></div>
+        <div class="section-label">Nos Vidéos</div>
+        <div style="display:flex;justify-content:center;">
+            <iframe 
+                src="https://www.youtube.com/embed/JOhBogbugB4" 
+                title="Vidéo d'exemple" 
+                allowfullscreen 
+                style="width:315px;height:560px;border:none;border-radius:12px;">
+            </iframe>
+        </div>
+    </div>
+</div>
+
+  <!-- ══════════════════════════════════════════
+       PAGE : QUI SOMMES-NOUS
+  ══════════════════════════════════════════ -->
+  <div class="page" id="page-about" style="padding-top:90px;">
+    <div class="grid-section">
+      <div class="section-label">Qui sommes-nous ?</div>
+
+      <div class="about-block">
+        <div class="about-img">
+          <img src="https://anoloc.fr/wp-content/uploads/2020/03/qui-sommes-nous-2.jpg" alt="L'équipe ClickSport" />
+        </div>
+        <div class="about-text">
+          <h2>Qui sommes-nous ?</h2>
+          <p><strong>ClickSport</strong>, c'est avant tout une équipe de cinq journalistes passionnés de sport. Des personnes qui vivent leur sujet, qui regardent les matchs et qui débattent entre elles, toujours curieuses d'en apprendre plus sur le sport de prédilection de leur collègue.</p>
+          <p>On couvre ce qu'on connaît et ce qu'on aime : le football, le basketball, le rugby, le tennis et les sports mécaniques. Cinq univers sportifs, traités avec une vraie expertise.</p>
+          <p class="about-philo">Notre philosophie : mieux vaut un article de qualité sur un sport qu'on maîtrise, qu'une brève bâclée sur un sport qu'on connaît mal.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       PAGE : QUI SOMMES-NOUS
+  ══════════════════════════════════════════ -->
+  <div class="page" id="page-about" style="padding-top:90px;">
+    <div class="grid-section">
+      <div class="section-label">Qui sommes-nous</div>
+
+      <div class="about-block">
+        <div class="about-img">
+          <img src="https://anoloc.fr/wp-content/uploads/2020/03/qui-sommes-nous-2.jpg" alt="L'équipe ClickSport" />
+        </div>
+        <div class="about-text">
+          <h2>Qui sommes-nous ?</h2>
+          <p>ClickSport, c'est avant tout une équipe de cinq journalistes passionnés de sport. Des personnes qui vivent leur sujet, qui regardent les matchs et qui débattent entre elles, toujours curieuses d'en apprendre plus sur le sport de prédilection de leur collègue.</p>
+          <p>On couvre ce qu'on connaît et ce qu'on aime : le football, le basketball, le rugby, le tennis et les sports mécaniques. Cinq univers sportifs, traités avec une vraie expertise. Notre philosophie : mieux vaut un article de qualité sur un sport qu'on maîtrise, qu'une brève bâclée sur un sport qu'on connaît mal.</p>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -1625,168 +1752,6 @@ Jeux n'attend pas.
 
     renderComments(id);
     showPage('article');
-  }
-
-  /* ════════════════════════════════════════════
-     COMMENTS — PERSISTANCE localStorage
-  ════════════════════════════════════════════ */
-
-  /* ── Clés localStorage ── */
-  const LS_COMMENTS = id => `pitlane_comments_${id}`;
-  const LS_LIKES    = id => `pitlane_likes_${id}`;
-
-  /* ── Charger les commentaires sauvegardés (fusionnés avec les défauts) ── */
-  function loadComments(articleId) {
-    const saved = localStorage.getItem(LS_COMMENTS(articleId));
-    if (saved) {
-      try {
-        const parsed = JSON.parse(saved);
-        // Les commentaires sauvegardés remplacent les défauts si présents
-        articles[articleId].comments = parsed;
-      } catch(e) {}
-    }
-  }
-
-  /* ── Sauvegarder les commentaires ── */
-  function saveComments(articleId) {
-    localStorage.setItem(LS_COMMENTS(articleId), JSON.stringify(articles[articleId].comments));
-  }
-
-  /* ── Charger les likes sauvegardés ── */
-  function loadLikes(articleId) {
-    const saved = localStorage.getItem(LS_LIKES(articleId));
-    return saved ? JSON.parse(saved) : {};
-  }
-
-  /* ── Sauvegarder les likes ── */
-  function saveLikes(articleId, likesObj) {
-    localStorage.setItem(LS_LIKES(articleId), JSON.stringify(likesObj));
-  }
-
-  /* ── Render section complète ── */
-  function renderComments(articleId) {
-    loadComments(articleId);
-    const allComments = articles[articleId].comments;
-    const section = document.getElementById('comments-section');
-
-    section.innerHTML = `
-      <div class="section-label" id="cm-label-${articleId}">Commentaires (${allComments.length})</div>
-
-      <div class="comment-form">
-        <div class="form-row">
-          <div class="form-field">
-            <label>Nom</label>
-            <input type="text" id="cm-name" placeholder="Votre nom" />
-          </div>
-          <div class="form-field">
-            <label>E-mail <span style="color:var(--faint);font-size:.7rem;">(non publié)</span></label>
-            <input type="email" id="cm-email" placeholder="votre@email.com" />
-          </div>
-        </div>
-        <div class="form-field form-full">
-          <label>Commentaire</label>
-          <textarea id="cm-text" rows="4" placeholder="Votre réaction sur cet article…"></textarea>
-        </div>
-        <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;">
-          <button class="btn-submit" onclick="submitComment(${articleId})">Publier mon commentaire</button>
-          <span id="cm-feedback" style="font-size:.8rem;color:var(--muted);opacity:0;transition:opacity .4s;"></span>
-        </div>
-      </div>
-
-      <div class="comments-list" id="comments-list-${articleId}">
-        ${allComments.map((c, i) => renderCommentHTML(c, articleId, i)).join('')}
-      </div>`;
-  }
-
-  /* ── HTML d'un commentaire ── */
-  function renderCommentHTML(c, articleId, index) {
-    const initials = c.name.split(' ').map(n => n[0]).join('').slice(0,2).toUpperCase();
-    const likes    = loadLikes(articleId);
-    const isLiked  = !!likes[index];
-    const likeCount = (c.likes || 0) + (isLiked ? 1 : 0);
-
-    return `
-      <div class="comment" id="comment-${articleId}-${index}">
-        <div class="comment-header">
-          <div class="comment-author">
-            <div class="comment-avatar">${initials}</div>
-            <span class="comment-name">${escapeHTML(c.name)}</span>
-          </div>
-          <span class="comment-date">${c.date}</span>
-        </div>
-        <p class="comment-text">${escapeHTML(c.text)}</p>
-        <span class="comment-like${isLiked ? ' liked' : ''}" onclick="toggleLike(this, ${articleId}, ${index})">
-          <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"/>
-          </svg>
-          <span class="like-count">${likeCount}</span>
-        </span>
-      </div>`;
-  }
-
-  /* ── Toggle like (persisté) ── */
-  function toggleLike(el, articleId, commentIndex) {
-    const liked    = el.classList.toggle('liked');
-    const countEl  = el.querySelector('.like-count');
-    const likes    = loadLikes(articleId);
-    const base     = articles[articleId].comments[commentIndex].likes || 0;
-
-    if (liked) {
-      likes[commentIndex] = true;
-    } else {
-      delete likes[commentIndex];
-    }
-    saveLikes(articleId, likes);
-    countEl.textContent = base + (liked ? 1 : 0);
-  }
-
-  /* ── Soumettre un commentaire ── */
-  function submitComment(articleId) {
-    const name    = document.getElementById('cm-name').value.trim();
-    const text    = document.getElementById('cm-text').value.trim();
-    const feedback = document.getElementById('cm-feedback');
-
-    if (!name || !text) {
-      feedback.textContent = '⚠ Merci de remplir votre nom et votre commentaire.';
-      feedback.style.color = 'var(--orange)';
-      feedback.style.opacity = '1';
-      setTimeout(() => feedback.style.opacity = '0', 3000);
-      return;
-    }
-
-    const now     = new Date();
-    const dateStr = now.toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
-    const newComment = { name, date: dateStr, text, likes: 0 };
-
-    // Ajouter et sauvegarder
-    articles[articleId].comments.push(newComment);
-    saveComments(articleId);
-
-    // Afficher dans le DOM
-    const list = document.getElementById(`comments-list-${articleId}`);
-    const idx  = articles[articleId].comments.length - 1;
-    const div  = document.createElement('div');
-    div.innerHTML = renderCommentHTML(newComment, articleId, idx);
-    const node = div.firstElementChild;
-    node.style.animation = 'pageIn .4s ease both';
-    list.appendChild(node);
-
-    // Reset formulaire
-    document.getElementById('cm-name').value = '';
-    document.getElementById('cm-text').value = '';
-
-    // Feedback visuel
-    feedback.textContent = '✓ Commentaire publié et sauvegardé !';
-    feedback.style.color = '#44cc88';
-    feedback.style.opacity = '1';
-    setTimeout(() => feedback.style.opacity = '0', 3000);
-
-    // Mettre à jour le compteur
-    const label = document.getElementById(`cm-label-${articleId}`);
-    if (label) label.textContent = `Commentaires (${articles[articleId].comments.length})`;
-
-    // Scroller vers le nouveau commentaire
-    setTimeout(() => node.scrollIntoView({ behavior: 'smooth', block: 'center' }), 100);
   }
 
   /* ── Sécurité : échapper le HTML saisi par l'utilisateur ── */
